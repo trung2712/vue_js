@@ -1,10 +1,10 @@
 <template>
-	<div id="app">
-		<!-- <CompHeader></CompHeader> -->
-		<!-- <CompHeader /> -->
-		<comp-header />
-		<img src="./assets/logo.png">
-		<h1>{{ msg }}</h1>
+  <div id="app">
+    <label>Nhap C</label>
+    <input type="number" name="C" v-model="c"/>
+    <comp-header :nhap-c=" Number (c)" />
+    <img src="./assets/logo.png">
+    <h1>{{ msg }}</h1>
 		<comp-footer />
 	</div>
 </template>
@@ -16,7 +16,8 @@ export default {
 	name: 'app',
 	data () {
 		return {
-			msg: 'Hello VueJs'
+			msg:  "",
+      c : 3
 		}
 	},
 	components: {
